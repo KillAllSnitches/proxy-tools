@@ -34,7 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>kye profile pic.ico</ApplicationIcon>
+    <ApplicationIcon>vx pfp.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>ProxyGenerator.Program</StartupObject>
@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="kye profile pic.ico" />
+    <Content Include="vx pfp.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,3 +5,9 @@ C:\Users\ProMa\source\repos\ProxyGenerator\obj\Release\ProxyGenerator.csprojAsse
 C:\Users\ProMa\source\repos\ProxyGenerator\obj\Release\ProxyGenerator.csproj.CoreCompileInputs.cache
 C:\Users\ProMa\source\repos\ProxyGenerator\obj\Release\ProxyGenerator.exe
 C:\Users\ProMa\source\repos\ProxyGenerator\obj\Release\ProxyGenerator.pdb
+C:\Users\zakis\Desktop\src\proxy-tools-master\proxy-tools-master\bin\Release\ProxyGenerator.exe.config
+C:\Users\zakis\Desktop\src\proxy-tools-master\proxy-tools-master\bin\Release\ProxyGenerator.exe
+C:\Users\zakis\Desktop\src\proxy-tools-master\proxy-tools-master\bin\Release\ProxyGenerator.pdb
+C:\Users\zakis\Desktop\src\proxy-tools-master\proxy-tools-master\obj\Release\ProxyGenerator.csproj.CoreCompileInputs.cache
+C:\Users\zakis\Desktop\src\proxy-tools-master\proxy-tools-master\obj\Release\ProxyGenerator.exe
+C:\Users\zakis\Desktop\src\proxy-tools-master\proxy-tools-master\obj\Release\ProxyGenerator.pdb
