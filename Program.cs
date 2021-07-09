@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Text;
 using System.Net;
@@ -13,7 +13,7 @@ namespace ProxyGenerator
         [STAThread]
         static void Main(string[] args)
         {
-            Console.Title = "Proxy Tools | Made by Kye | https://github.com/promasterboy";
+            Console.Title = "Proxy Tools | Made by Kye | Additional Sources by VX | https://github.com/promasterboy";
             int selection = 0;
         start: Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("Proxy Tools");
@@ -22,9 +22,9 @@ namespace ProxyGenerator
             Console.WriteLine("===============");
             Console.WriteLine("");
             Console.WriteLine("Proxy Generator");
-            Console.WriteLine("1 = HTTP");
-            Console.WriteLine("2 = Socks4");
-            Console.WriteLine("3 = Socks5");
+            Console.WriteLine("1 = HTTP/S");
+            Console.WriteLine("2 = SOCKS4");
+            Console.WriteLine("3 = SOCKS5");
             Console.WriteLine("");
             Console.WriteLine("===============");
             Console.WriteLine("");
@@ -47,20 +47,20 @@ namespace ProxyGenerator
            switch (selection)
             {
                 case 1:
-                    Console.WriteLine("Getting HTTP Proxies!");
-                    proxyurls = new string[2]{ "https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=10000&country=all&ssl=all&anonymity=all", "https://raw.githubusercontent.com/clarketm/proxy-list/master/proxy-list-raw.txt" };
+                    Console.WriteLine("Getting HTTP/S Proxies!");
+                    proxyurls = new string[6]{ "https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=10000&country=all&ssl=all&anonymity=all", "https://raw.githubusercontent.com/clarketm/proxy-list/master/proxy-list-raw.txt", "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt", "https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/http.txt", "https://raw.githubusercontent.com/roosterkid/openproxylist/main/HTTPS_RAW.txt", "https://raw.githubusercontent.com/Volodichev/proxy-list/main/http.txt" };
                     WriteProxies(proxyurls, "HTTP");
                     break;
 
                 case 2:
-                    Console.WriteLine("Getting Socks4 Proxies!");
-                    proxyurls = new string[1]{ "https://api.proxyscrape.com/?request=getproxies&proxytype=socks4&timeout=10000&country=all" };
+                    Console.WriteLine("Getting SOCKS4 Proxies!");
+                    proxyurls = new string[4]{ "https://api.proxyscrape.com/?request=getproxies&proxytype=socks4&timeout=10000&country=all", "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt", "https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/socks4.txt", "https://raw.githubusercontent.com/roosterkid/openproxylist/main/SOCKS4_RAW.txt" };
                     WriteProxies(proxyurls, "Socks4");
                     break;
 
                 case 3:
-                    Console.WriteLine("Getting Socks5 Proxies!");
-                    proxyurls = new string[1]{ "https://api.proxyscrape.com/?request=getproxies&proxytype=socks5&timeout=10000&country=all" };
+                    Console.WriteLine("Getting SOCKS5 Proxies!");
+                    proxyurls = new string[4]{ "https://api.proxyscrape.com/?request=getproxies&proxytype=socks5&timeout=10000&country=all", "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt", "https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/socks5.txt", "https://raw.githubusercontent.com/roosterkid/openproxylist/main/SOCKS5_RAW.txt" };
                     WriteProxies(proxyurls, "Socks5");
                     break;
 
