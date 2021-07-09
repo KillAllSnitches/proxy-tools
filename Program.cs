@@ -13,22 +13,22 @@ namespace ProxyGenerator
         [STAThread]
         static void Main(string[] args)
         {
-            Console.Title = "Proxy Tools | Made by Kye | Additional Sources by VX | https://github.com/promasterboy";
+            Console.Title = "Proxy Tools | Made by Kye | Tweaked by VX ";
             int selection = 0;
         start: Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("Proxy Tools");
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("                                                   ~ Contributors ~");
+            Console.WriteLine("                                               github.com/kyeondiscord");
+            Console.WriteLine("                                                  github.com/vx-dev");
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("");
-            Console.WriteLine("===============");
-            Console.WriteLine("");
-            Console.WriteLine("Proxy Generator");
-            Console.WriteLine("1 = HTTP/S");
-            Console.WriteLine("2 = SOCKS4");
-            Console.WriteLine("3 = SOCKS5");
-            Console.WriteLine("");
-            Console.WriteLine("===============");
-            Console.WriteLine("");
-            Console.WriteLine("4 = Proxy Checker");
+            Console.WriteLine(" > Proxy Tools <");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("  1 = HTTP/S");
+            Console.WriteLine("  2 = SOCKS4");
+            Console.WriteLine("  3 = SOCKS5");
+            Console.WriteLine("  4 = Checker");
+
+
             try
             {
                 selection = int.Parse(Console.ReadLine());
@@ -47,22 +47,36 @@ namespace ProxyGenerator
            switch (selection)
             {
                 case 1:
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine(" > Proxy Scraper <");
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Getting HTTP/S Proxies!");
                     proxyurls = new string[6]{ "https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=10000&country=all&ssl=all&anonymity=all", "https://raw.githubusercontent.com/clarketm/proxy-list/master/proxy-list-raw.txt", "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt", "https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/http.txt", "https://raw.githubusercontent.com/roosterkid/openproxylist/main/HTTPS_RAW.txt", "https://raw.githubusercontent.com/Volodichev/proxy-list/main/http.txt" };
                     WriteProxies(proxyurls, "HTTP");
-                    break;
+                    Console.Clear();
+                    goto start;
 
                 case 2:
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine(" > Proxy Scraper <");
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Getting SOCKS4 Proxies!");
                     proxyurls = new string[4]{ "https://api.proxyscrape.com/?request=getproxies&proxytype=socks4&timeout=10000&country=all", "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt", "https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/socks4.txt", "https://raw.githubusercontent.com/roosterkid/openproxylist/main/SOCKS4_RAW.txt" };
                     WriteProxies(proxyurls, "Socks4");
-                    break;
+                    Console.Clear();
+                    goto start;
 
                 case 3:
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine(" > Proxy Scraper <");
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Getting SOCKS5 Proxies!");
                     proxyurls = new string[4]{ "https://api.proxyscrape.com/?request=getproxies&proxytype=socks5&timeout=10000&country=all", "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt", "https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/socks5.txt", "https://raw.githubusercontent.com/roosterkid/openproxylist/main/SOCKS5_RAW.txt" };
                     WriteProxies(proxyurls, "Socks5");
-                    break;
+                    Console.Clear();
+                    goto start;
 
                 case 4:
                     if (!File.Exists("good_proxies.txt"))
@@ -74,7 +88,8 @@ namespace ProxyGenerator
                         File.Create("bad_proxies.txt").Close();
                     }
                     CheckProxies();
-                    break;
+                    Console.Clear();
+                    goto start;
             }
             }
         public static int good { get; set; }
@@ -91,15 +106,13 @@ namespace ProxyGenerator
             Console.Clear();
             string[] proxies = File.ReadAllLines(o.FileName);
             Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("Checking Proxies");
-            Console.WriteLine(" ");
-            Console.WriteLine("============");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("> Proxy Checker <");
             Console.WriteLine(" ");
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Good: " + good);
+            Console.WriteLine("Live: " + good);
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Bad: " + bad);
+            Console.WriteLine("Dead: " + bad);
             foreach (string proxy in proxies)
             {
                 Thread.Sleep(800);
@@ -122,26 +135,24 @@ namespace ProxyGenerator
                     bad++;
                 }
                 Console.Clear();
-                Console.ForegroundColor = ConsoleColor.Blue;
-                Console.WriteLine("Checking Proxies");
-                Console.WriteLine(" ");
-                Console.WriteLine("============");
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("> Proxy Checker <");
                 Console.WriteLine(" ");
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("Good: " + good);
+                Console.WriteLine("Live: " + good);
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Bad: " + bad);
+                Console.WriteLine("Dead: " + bad);
             }
             Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("Proxy Results");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("> Proxy Checker <");
             Console.WriteLine(" ");
-            Console.WriteLine("============");
-            Console.WriteLine(" ");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Results:");
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine(good + " good proxies saved to " + AppDomain.CurrentDomain.BaseDirectory + "good_proxies.txt");
+            Console.WriteLine("Live:" + good);
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine(bad + " bad proxies saved to " + AppDomain.CurrentDomain.BaseDirectory + "bad_proxies.txt");
+            Console.WriteLine("Dead:" + bad);
             Console.ReadKey();
         }
         static void WriteProxies(string[] url, string type)
@@ -185,7 +196,7 @@ namespace ProxyGenerator
             {
                 IWebProxy proxy = new WebProxy(data[0], port);
                 WebClient wc = new WebClient();
-                wc.Timeout = 3500;
+                wc.Timeout = 2500;
                 wc.Proxy = proxy;
                 wc.Encoding = Encoding.UTF8;
                 string result = wc.DownloadString("http://ip-api.com/line/?fields=8192");
