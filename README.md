@@ -1,5 +1,7 @@
-Proxy Tools
+# Proxy Tools
+Proxy Generator
 Generate HTTP, Socks4 or Socks5 Proxies!
 
-Also includes a Proxy Checker which is tested on google.com
-![](https://i.imgur.com/s1LmoFE.png)
+Proxy Checker
+tests proxy connections with ip-api.net
+![](https://cdn.upload.systems/uploads/qg8DtNrm.png)
