@@ -115,7 +115,7 @@ namespace ProxyGenerator
             Console.WriteLine("Dead: " + bad);
             foreach (string proxy in proxies)
             {
-                Thread.Sleep(800);
+                Thread.Sleep(50);
                 if (ProxyCheck(proxy) == true)
                 {
                     string append = File.ReadAllText("good_proxies.txt");
@@ -163,7 +163,7 @@ namespace ProxyGenerator
                 File.Delete(filename);
             }
             WebClient webClient = new WebClient();
-            webClient.Timeout = 100000;
+            webClient.Timeout = 2500;
             string proxylist = "";
             string[] proxyarray = url;
             foreach (string proxyurl in proxyarray)
